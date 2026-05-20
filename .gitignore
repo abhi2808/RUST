@@ -1,0 +1,19 @@
+# Rust/Cargo
+target/
+**/target/
+**/Cargo.lock
+**/Cargo.toml.orig
+**/*.rs.bk
+**/.cargo/**
+
+# Visual Studio Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional: editor temp files
+*~
+*.swp
+*.swo

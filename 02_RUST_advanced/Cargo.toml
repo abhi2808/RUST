@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "a_revision",
+    "b_beyond_basics",
+]
+resolver = "2"
