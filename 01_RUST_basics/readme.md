@@ -39,7 +39,7 @@ The reference to the var in heaps 1st point of reference is stored inside the st
 # Ownership
 A system with a set of rules that the compiler checks for to manage memory this causes rust compilation to be really slow.
 
-Not complicated for stack, heap variables(are like rihana..personal understanding), heap variables always want to have an owner and a single owner and if the owner gies out of scope, the variable gets deallocated.
+Not complicated for stack, heap variables(are like rihana..personal understanding), heap variables always want to have an owner and a single owner and if the owner goes out of scope, the variable gets deallocated.
 
 Anytime you put something on the heap, there will be some variable on the stack that will own it. If the owner is changed the pervious owner becomes invalid.
 
@@ -48,7 +48,7 @@ Anytime you put something on the heap, there will be some variable on the stack 
 the scenario in the above image is not possible as s1 will be invalidated(kill itself) 
 
 
-As copying is expensive on a heap, in rust if s2=s2, both point to the same variable, this may cause issue when we are passing vars across functions, thus we ideally pass s1.copy(), or return the value from the called function to the calling function in a variable, this will keep the data in heap alive, the validity of the var deplend on what var recieves the return!
+As copying is expensive on a heap, in rust if s2=s2, both point to the same variable, this may cause issue when we are passing vars across functions, thus we may pass s1.copy(), or return the value from the called function to the calling function in a variable, this will keep the data in heap alive, the validity of the var depends on what var recieves the return!
 
 
 # Borrowing and References
@@ -70,7 +70,7 @@ These rules help you keep the data consistent and prevent race conditions
 # Structs
 Used to create objects, like types in TS. Apart from these normal ones other types of structs are unit structs and tuple structs, unit structs basically without attributes used like classes without attributes and tuple structs are basically tuples with named struct.
 
- you can also implement structs, i.e. attatching functions to the instance of structs(like classes), also created 
+you can also implement structs, i.e. attatching functions to the instance of structs(like classes), also created 
 
 
 # Enum
@@ -78,7 +78,7 @@ Used when one out of a list of values need to be selected. Some of the commonly 
 
 Instead of JS try{}catch{}, rust uses result enums(to be declared and be returned by a function that might throw that error) for graceful error handling.
 
-If there is a function that can error out or stop a thread, the fuction can prevent doing those by returning a resukt of type error.
+If there is a function that can error out or stop a thread, the fuction can prevent doing those by returning a result of type error.
 
 
 There is another enum called the option enum which is used to handl the concept of nullability, safely. So if something can be either a value or null we use options enum. Option<i32> and then match in the main!

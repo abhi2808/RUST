@@ -33,13 +33,13 @@ Dynamic array, puts values next to each other in memory
 Help store key value pairs on rust
 
 ### iterators in rust
-allows you to perform some tas on a sequence of items, responsible for iterating over each item and determining when seq us finished. Iterators are lazy they dont take effecr until you call methods that consume them!
+allows you to perform some tasks on a sequence of items, responsible for iterating over each item and determining when seq is finished. Iterators are lazy they dont take effect until you call methods that consume them!
 
 if vals is a vector, when we are writing: for v in vals it is under the hood gettinig converted to: for v in vals.iter(), the iterator doesn't consume the values just borrows them so no issue for ownership. This borrowed reference may be immuatble or mutable. Iterator also has its .next() function to iterate!
 
-There is a 3rd type of iterator caled the into-iterator, can give some performance benefits, it converts collection into an iterator by taking the ownership of it. Used when a)the original collection is no longer required, b)when we need to seque
+There is a 3rd type of iterator called the into-iterator, can give some performance benefits, it converts collection into an iterator by taking the ownership of it. Used when a)the original collection is no longer required, b)when we need to seque
 
-normal iter is a collection of references while the intoiter contains actual values(svaes some time). All this info would be more useful when you are implementing a iterator traits.
+normal iter is a collection of references while the intoiter contains actual values(saves some time). All this info would be more useful when you are implementing a iterator traits.
 
 ![when-to-use](image.png)
 
@@ -80,7 +80,7 @@ impl xyz for User{..should have that function defined..}
 then any user/instance of user can use the function defined in that trait.
 
 
-Also while initally defining the function inside a trait we can also have a default implementation that would be used if the struct implementing that trait doesn;t have that funxtion defined.
+Also while initally defining the function inside a trait we can also have a default implementation that would be used if the struct implementing that trait doesn't have that function defined.
 
 We can also setup a function such that it takes only those structs as a parameter that implement a particular trait
 
